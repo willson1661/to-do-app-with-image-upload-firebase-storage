@@ -15,7 +15,7 @@ import {
 
 import { storage} from "./firebase";
 
-import { v4 } from "uuid";
+
 import { FaUpload } from 'react-icons/fa';
 
 const Firebasemain =()=> {
@@ -35,7 +35,7 @@ const Firebasemain =()=> {
     
   };
 
- 
+ // eslint-disable-next-line
 
   useEffect(() => {
     listAll(imagesListRef).then((response) => {
@@ -52,11 +52,9 @@ const Firebasemain =()=> {
 
   const removeItem11 = (url) => {
   let pictureRef=ref(storage,url);
-
 deleteObject(pictureRef);
 window. open("/uploadimage","_self")
-
-  };
+ };
 
 
 
