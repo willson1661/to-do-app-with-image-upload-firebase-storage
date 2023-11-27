@@ -46,14 +46,15 @@ const Firebasemain =()=> {
       });
       console.log(response);
     });
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
 
-
+// eslint-disable-next-line
   const removeItem11 = (url) => {
   let pictureRef=ref(storage,url);
 deleteObject(pictureRef);
-window. open("/uploadimage","_self")
+window.open("/uploadimage","_self")
  };
 
 
@@ -82,7 +83,7 @@ className='ret11'
       {imageUrls.map((url) => {
         return (
         <div className='brder'>
-        <img src={url} style={{width:"150px", height:"150px"}} />
+        <img src={url} style={{width:"150px", height:"150px"}} alt="url" />
         
         <button
                     
