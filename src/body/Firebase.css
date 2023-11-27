@@ -1,0 +1,90 @@
+.total {
+    width: 75vw;
+    background-color: #003950;
+    border-radius: 16px;
+    margin: 4.5rem 1rem;
+    color: #fff;
+    height: 6rem;
+    display: flex;
+    align-items: center;
+    place-content: center;
+    gap: 32px;
+
+  
+  }
+
+  button {
+    border: none;
+    border-radius: 5px;
+    width: 7vw;
+    height: 5vh;
+    padding: 9px;
+    background: #2facb9;
+    color: #fff;
+    position: sticky;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.ret11{
+    width: 8rem;
+}
+
+.imagess {
+    display: flex;
+    flex-direction: column;
+    gap: 34px;
+
+
+
+ 
+    margin-top: -47px;
+    position: relative;
+    top: -7px;
+}
+
+.brder {
+    border: 1px solid #003950;
+    border-radius: 10px;
+    padding: 10px;
+   
+}
+.delete-btnsss {
+    float: right;
+    margin: 48px 4px;
+    /* margin-left: 22px; */
+    /* margin-right: 41px; */
+    width: 48px;
+    background: #003950;
+}
+.rd11 {
+    margin-top: 10px;
+    height: 7vh;
+    width: 8vw;
+    font-size: 19px;
+}
+
+@media (max-width:800px){
+    .rd11 {
+        height: 5vh;
+        width: 9vw;
+        font-size: 14px;
+    }
+}
+
+@media (max-width:500px){
+    .rd11 {
+        height: 5vh;
+        width: 13vw;
+        font-size: 14px;
+    }
+    .gt1{
+width: 11vw;
+    }
+
+    .total {
+
+            width: 86vw;
+        gap: 19px;
+    }
+}
