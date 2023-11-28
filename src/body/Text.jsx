@@ -26,11 +26,19 @@ const Text = ( ) => {
   const handleSubmit = (e) => {
     if (inputdata.firstName) {
       e.preventDefault();
-      const newPerson = { ...inputdata, id: new Date().getTime().toString() };
+      const newPerson = { ...inputdata, id: new Date().getTime().toString(),completed:true };
       setPeople([...people, newPerson]);
       setData({ firstName: "" });
     }
   };
+  
+  const handleClick = (e) => {
+    e.target.classList.toggle("strikeThrough");
+    localStorage.setItem('people', JSON.stringify(people));
+  };
+
+ 
+
 
   useEffect(() => {
     const people = JSON.parse(localStorage.getItem("people"));
@@ -71,15 +79,19 @@ const Text = ( ) => {
 
 
       <div className="items" style={{display:"grid",gridGap:"10px"}}>
-        {people.map((item) => {
+        {people.map((item,index) => {
           const { firstName} = item;
 
           return (
             <div>
-              <div className="item" key={item}>
-                <div className="one" key={item}>
-                  <p>{firstName}</p>
-
+              
+              <div className="item" key={item.ID}>
+            
+                <div className="one" key={item.ID}>
+               
+                  <p  key={index}  onClick={handleClick}>
+                    {item.firstName}</p>
+                  
                   <div className="btns">
                    
                     <button
@@ -89,6 +101,7 @@ const Text = ( ) => {
                     >
                       <FaTrash className="icons" />
                     </button>
+                   
                   </div>
                 </div>
               </div>
@@ -100,3 +113,5 @@ const Text = ( ) => {
   );
 };
 export default Text;
+
+
