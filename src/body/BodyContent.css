@@ -48,14 +48,12 @@ img {
 .rd11{
   margin-top: 10px;
 }
-.strikeThrough {
-  text-decoration: line-through;
-  color: red;
+.strike{
+  text-decoration-thickness: 1.8px !important;
+  text-decoration-color: red !important;
+
 }
-.activestrikethrough{
-  text-decoration:none;
-  color: blue;
-}
+
 
 button {
   border: none;
@@ -88,13 +86,7 @@ button {
   margin-top: 23px !important;
 }
 
-.check1{
-  text-decoration: none;
-}
-.activeCheck{
-  text-decoration: line-through;
-    text-decoration-thickness: 1.3px;
-}
+
 
 textarea {
   border: none;
@@ -182,9 +174,8 @@ p {
   border-color: transparent;
   cursor: pointer;
   font-size: 0.7rem;
-  margin: 4px -43px;
+  margin: 4px -63px;
   transition: all 0.3s linear;
-
   font-size: 21px;
   background: none;
   color: #003950;
@@ -354,7 +345,14 @@ width:450px;
   z-index: -2;
   color: #fff;
 }
-
+@media (max-width: 1200px) {
+.delete-btn,
+  .edit-btn {
+ 
+    margin: 4px -63px;
+ 
+  }
+}
 
 @media (max-width: 1000px) {
   .row .items {
@@ -374,6 +372,12 @@ width:450px;
     width: 3vw;
     height: 5vh;
   }
+    .delete-btn,
+    .edit-btn {
+  
+      margin: 4px -31px;
+  
+    }
   /* 
   .row {
     width: 77vw;
@@ -424,7 +428,7 @@ width:450px;
     width: 4.3vw;
     height: 5vh;
     padding: 1px 3px;
-    margin: 3px;
+
   }
 }
 @media (max-width: 500px) {
@@ -432,7 +436,7 @@ width:450px;
   .edit-btn {
     position: relative;
     left: 9px;
-    margin: 2px 7px;
+margin: 4px -24px;
     padding: 1px 3px;
     font-size: 21px;
     background: none;
